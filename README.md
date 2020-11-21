@@ -1,16 +1,13 @@
-# For Ideal SOPT Hitchhiking
+# For Ideal SOPT hitchhiking
 
 일중독자 솝트인들을 위한 안내서
 
 ## API 명세서
 
-[유저] (https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/User)
-
-[게시글] (https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/Post)
-<!-- - [createPost](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 사용자가 입력한 자신의 휴식 방법을 Post 테이블에 추가하고, 다른 사용자에게 보여줍니다.
-- [createUser](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/userController.js): 사용자의 닉네임과 파트를 전달받아 User 테이블에 추가합니다. 
-- [toggleLike](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 각 Post는 좋아요를 받을 수 있습니다.
-- [readAllPosts](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 모든 Posts를 조회합니다. -->
+- [createPost](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/Post): 사용자가 입력한 자신의 휴식 방법을 Post 테이블에 추가하고, 다른 사용자에게 보여줍니다.
+- [createUser](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/User): 사용자의 닉네임과 파트를 전달받아 User 테이블에 추가합니다. 
+- [toggleLike](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/%5BPOST%5D--posts-:postId-like): 각 Post는 좋아요를 받을 수 있습니다.
+- [readAllPosts](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/%5BGET%5DPost): 모든 Posts를 조회합니다.
 
 ## sequelize Model
 
@@ -30,7 +27,7 @@ db.Post.belongsToMany(db.User, { through: "Like", as: "Liker" });
 
 ## ERD
 
-<img src='./public/images/erd.png' width='50%'>
+<img src='./public/images/erd.jpg' width='80%'>
 
 ## 기능 소개
 
