@@ -1,18 +1,22 @@
-const { Post, Like } = require("../models");
+const { Post, Like, User } = require("../models");
 const responseMessage = require("../modules/responseMessage");
 const statusCode = require("../modules/statusCode");
 const util = require("../modules/util");
 
 module.exports = {
   createPost: async (req, res) => {
-    const { title, contents } = req.body;
+    const { title, contents, nickname } = req.body;
+    console.log(req);
+    console.log(req.file);
     const postImageUrl = req.file.location;
     try {
+      const user = await User.findOne({ nickname });
       const post = await Post.create({
         title,
         contents,
-        postImageUrl,
+        // postImageUrl,
       });
+      await user.addPost(post);
       res
         .status(statusCode.OK)
         .send(
