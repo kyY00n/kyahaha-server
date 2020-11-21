@@ -19,14 +19,14 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.User = require("./userModel")(sequelize, Sequelize);
 db.Post = require("./postModel")(sequelize, Sequelize);
-// db.Like = require("./like")(sequelize, Sequelize);
+db.Like = require("./likeModel")(sequelize, Sequelize);
 
 /* 1 : N   User : Post */
 db.User.hasMany(db.Post, { onDelete: "cascade" });
 db.Post.belongsTo(db.User);
 
 /* M : N   User : Post  => Like */
-// db.User.belongsToMany(db.Post, { through: "Like", as: "Liked" });
-// db.Post.belongsToMany(db.User, { through: "Like", as: "Liker" });
+db.User.belongsToMany(db.Post, { through: "Like", as: "Liked" });
+db.Post.belongsToMany(db.User, { through: "Like", as: "Liker" });
 
 module.exports = db;
