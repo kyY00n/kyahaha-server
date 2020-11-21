@@ -14,9 +14,9 @@ sequelize
   .catch((error) => {
     console.error(error);
   });
+var app = express();
 app.use(cors());
 
-var app = express();
 var indexRouter = require("./routes/index");
 
 // view engine setup
