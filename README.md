@@ -8,6 +8,8 @@
 - [createUser](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/User): 사용자의 닉네임과 파트를 전달받아 User 테이블에 추가합니다. 
 - [toggleLike](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/%5BPOST%5D--posts-:postId-like): 각 Post는 좋아요를 받을 수 있습니다.
 - [readAllPosts](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/%5BGET%5DPost): 모든 Posts를 조회합니다.
+- [randomImage](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/randomImage): 랜덤으로 힐링 이미지를 가져옵니다.
+
 
 ## sequelize Model
 
