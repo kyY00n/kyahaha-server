@@ -49,6 +49,13 @@ module.exports = {
   AUTH_SUCCESS: "인증에 성공했습니다.",
   ISSUE_SUCCESS: "새로운 토큰이 생성되었습니다.",
 
+  /** Like */
+  CREATE_LIKE_SUCCESS: "게시글 좋아요 성공",
+  CREATE_LIKE_FAIL: "게시글 좋아요 실패",
+  DELETE_LIKE_SUCCESS: "게시글 좋아요 취소하기 성공",
+  DELETE_LIKE_FAIL: "게시글 좋아요 취소하기 실패",
+  ALREADY_LIKED: "이미 좋아요가 되어 있음",
+
   /* 서버에러 */
   INTERNAL_SERVER_ERROR: "서버 내부 오류",
 };
