@@ -8,12 +8,13 @@ const util = require("../modules/util");
 
 module.exports = {
   createPost: async (req, res) => {
-    const { part, title, contents } = req.body;
+    const { title, contents } = req.body;
+    const postImageUrl = req.file.location;
     try {
       const post = await Post.create({
-        part,
         title,
         contents,
+        postImageUrl,
       });
       res
         .status(statusCode.OK)
@@ -36,7 +37,7 @@ module.exports = {
   readAllPosts: async (req, res) => {
     try {
       const posts = await Post.findAll({
-        attributes: ["title", "contents"],
+        attributes: ["title", "contents", "postImageUrl"],
       });
       res
         .status(statusCode.OK)

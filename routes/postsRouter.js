@@ -1,9 +1,10 @@
 const express = require("express");
 const postController = require("../controllers/postController");
+const upload = require("../modules/multer");
 const postsRouter = express.Router();
 
 // Create a post
-postsRouter.post("/", postController.createPost);
+postsRouter.post("/", upload.single("image"), postController.createPost);
 
 // Get all posts
 postsRouter.get("/", postController.readAllPosts);
