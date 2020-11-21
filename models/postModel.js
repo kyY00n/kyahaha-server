@@ -2,14 +2,14 @@ module.exports = (sequelize, DataTypes) => {
   return sequelize.define(
     "Post",
     {
-      nickname: {
-        type: DataTypes.STRING(30),
-        allowNull: false,
-      },
-      part: {
-        type: DataTypes.STRING(30),
-        allowNull: false,
-      },
+      // nickname: {
+      //   type: DataTypes.STRING(30),
+      //   allowNull: false,
+      // },
+      // part: {
+      //   type: DataTypes.STRING(30),
+      //   allowNull: false,
+      // },
       title: {
         type: DataTypes.STRING(30),
         allowNull: false,

@@ -3,7 +3,11 @@ module.exports = (sequelize, DataTypes) => {
     "User",
     {
       //모델의 Attributes (Column)을 정의하는곳
-      userName: {
+      nickname: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
+      },
+      part: {
         type: DataTypes.STRING(20),
         allowNull: false,
       },

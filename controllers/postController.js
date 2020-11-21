@@ -8,10 +8,9 @@ const util = require("../modules/util");
 
 module.exports = {
   createPost: async (req, res) => {
-    const { nickname, part, title, contents } = req.body;
+    const { part, title, contents } = req.body;
     try {
       const post = await Post.create({
-        nickname,
         part,
         title,
         contents,
@@ -37,7 +36,7 @@ module.exports = {
   readAllPosts: async (req, res) => {
     try {
       const posts = await Post.findAll({
-        attributes: ["nickname", "part", "title", "contents"],
+        attributes: ["title", "contents"],
       });
       res
         .status(statusCode.OK)
