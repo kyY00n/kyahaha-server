@@ -4,7 +4,7 @@
 
 > 일 중독자 솝트인들을 위한 안내서!
 
-<img src="./public/images/logo.jpg" width="200"/>
+<img src="./public/images/logo.jpeg" width="200"/>
 
 ## 🔧 Credit
 
