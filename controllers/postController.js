@@ -5,17 +5,26 @@ const util = require("../modules/util");
 
 module.exports = {
   createPost: async (req, res) => {
-    const { title, contents, nickname } = req.body;
-    console.log(req);
+    const { contents, nickname } = req.body;
+    console.log("something");
+    // console.log(req);
     console.log(req.file);
     const postImageUrl = req.file.location;
+    if (!postImageUrl) {
+      return res
+        .status(statusCode.NO_CONTENT)
+        .send(util.fail(statusCode.NO_CONTENT, responseMessage.NULL_VALUE));
+    }
     try {
       const user = await User.findOne({ nickname });
       const post = await Post.create({
-        title,
         contents,
         postImageUrl,
       });
+      if (!user) {
+        console.log("no user");
+        res.send("no user");
+      }
       await user.addPost(post);
       res
         .status(statusCode.OK)
@@ -38,7 +47,7 @@ module.exports = {
   readAllPosts: async (req, res) => {
     try {
       const posts = await Post.findAll({
-        attributes: ["title", "contents", "postImageUrl"],
+        attributes: ["contents", "postImageUrl"],
       });
       res
         .status(statusCode.OK)
