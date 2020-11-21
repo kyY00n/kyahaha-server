@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       postImageUrl: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(300),
         allowNull: true,
       },
       numberOfLikes: {
