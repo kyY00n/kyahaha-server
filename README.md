@@ -28,7 +28,7 @@ db.Post.belongsToMany(db.User, { through: "Like", as: "Liker" });
 
 ## ERD
 
-<img src='./public/images/erd.jpg' width='80%'>
+<img src='./public/images/erd.png' width='80%'>
 
 ## 기능 소개
 
