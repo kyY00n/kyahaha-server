@@ -1,8 +1,9 @@
 const express = require("express");
+const userController = require("../../4th-seminar/controller/userController");
 const usersRouter = express.Router();
 
 // Create a user
-usersRouter.post("/");
+usersRouter.post("/", userController.createUser);
 
 // Get all users
 usersRouter.get("/");

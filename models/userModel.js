@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(20),
         allowNull: false,
       },
-      salt: {
-        type: DataTypes.STRING(200),
-        allowNull: false,
-      },
+      // salt: {
+      //   type: DataTypes.STRING(200),
+      //   allowNull: false,
+      // },
     },
     {
       //모델의 옵션들을 지정하는곳
