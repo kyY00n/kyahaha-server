@@ -1,8 +1,32 @@
-# For Ideal SOPT hitchhiking
+# For Ideal SOPT Hitchhiking
 
-일중독자 솝트인들을 위한 안내서
+![lang](https://img.shields.io/badge/Language-JavaScript-blue)  ![realease](https://img.shields.io/badge/release-v1.0.0-yellow)
 
-## API 명세서
+> 일 중독자 솝트인들을 위한 안내서!
+
+<img src="./images/logo.png" alt="drawing" width="200"/>
+
+## 🔧 Credit
+
+- **Language**: JavaScript
+- **Framework **: Node.js
+
+## 💻 Getting Started
+
+### Installation
+
+```bash
+$ git clone https://github.com/soptkerthon-kyahaha/kyahaha-server.git
+$ cd [project-name]
+$ npm install
+```
+
+### Develop Mode
+
+```
+$ npm start
+```
+## API Usage
 
 - [createPost](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/createPost): 사용자가 입력한 자신의 휴식 방법을 Post 테이블에 추가하고, 다른 사용자에게 보여줍니다.
 - [createUser](https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/createUser): 사용자의 닉네임과 파트를 전달받아 User 테이블에 추가합니다. 
@@ -36,6 +60,8 @@ db.Post.belongsToMany(db.User, { through: "Like", as: "Liker" });
 - 해당 사용자의 닉네임과 휴식 방법을 다른 사용자들이 볼 수 있게 합니다.
 
 ------
+## 👨‍👩‍👧‍👦 Developer & Role
 
-- 김우영 - Post 처리 API (생성, 조회), Like 처리 API
-- 윤가영 - User 생성, 랜덤 이미지 응답
+- **김우영**([w00ing](https://github.com/w00ing)) - Post 처리 API (생성, 조회), Like 처리 API
+
+- **윤가영**([kyY00n](https://github.com/kyY00n)) - User 생성, 랜덤 이미지 응답
