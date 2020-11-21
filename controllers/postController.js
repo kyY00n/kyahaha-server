@@ -1,7 +1,4 @@
-const { Post } = require("../models");
-const {
-  generateRandomNickname,
-} = require("../modules/randomNicknameGenerator");
+const { Post, Like } = require("../models");
 const responseMessage = require("../modules/responseMessage");
 const statusCode = require("../modules/statusCode");
 const util = require("../modules/util");
@@ -54,6 +51,47 @@ module.exports = {
         .status(statusCode.BAD_REQUEST)
         .send(
           util.fail(statusCode.BAD_REQUEST, responseMessage.READ_POST_ALL_FAIL),
+        );
+    }
+  },
+  toggleLike: async (req, res) => {
+    const PostId = req.params.postId;
+    const UserId = req.body.userId;
+
+    try {
+      const alreadyLike = await Like.findOne({ where: { PostId, UserId } });
+      if (alreadyLike) {
+        await Like.destroy({ where: { PostId, UserId } });
+        return res
+          .status(statusCode.OK)
+          .send(
+            util.success(
+              statusCode.OK,
+              responseMessage.DELETE_LIKE_SUCCESS,
+              alreadyLike,
+            ),
+          );
+      } else {
+        const like = await Like.create({ UserId, PostId });
+        return res
+          .status(statusCode.OK)
+          .send(
+            util.success(
+              statusCode.OK,
+              responseMessage.CREATE_LIKE_SUCCESS,
+              like,
+            ),
+          );
+      }
+    } catch (error) {
+      console.log(error);
+      return res
+        .status(statusCode.INTERNAL_SERVER_ERROR)
+        .send(
+          util.fail(
+            statusCode.INTERNAL_SERVER_ERROR,
+            responseMessage.INTERNAL_SERVER_ERROR,
+          ),
         );
     }
   },

@@ -15,4 +15,6 @@ postsRouter.get("/:postId");
 // Delete a post by ID
 postsRouter.delete("/");
 
+postsRouter.post("/:postId/like", postController.toggleLike);
+
 module.exports = postsRouter;
