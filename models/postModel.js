@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
   return sequelize.define(
     "Post",
     {
-      owner: {
+      nickname: {
         type: DataTypes.STRING(30),
         allowNull: false,
       },

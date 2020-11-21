@@ -1,11 +1,12 @@
 const express = require("express");
+const postController = require("../controllers/postController");
 const postsRouter = express.Router();
 
 // Create a post
-postsRouter.post("/");
+postsRouter.post("/", postController.createPost);
 
 // Get all posts
-postsRouter.get("/");
+postsRouter.get("/", postController.readAllPosts);
 
 // Get a post by ID
 postsRouter.get("/:postId");
