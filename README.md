@@ -1,4 +1,4 @@
-# For Ideal SOPT hitchhiking
+# For Ideal SOPT Hitchhiking
 
 일중독자 솝트인들을 위한 안내서
 
@@ -27,7 +27,7 @@ db.Post.belongsToMany(db.User, { through: "Like", as: "Liker" });
 
 ## ERD
 
-<img src='./public/images/erd.jpg' width='80%'>
+<img src='./public/images/erd.png' width='60%'>
 
 ## 기능 소개
 
