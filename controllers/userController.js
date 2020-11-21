@@ -1,7 +1,7 @@
 const util = require("../modules/util");
 const responseMessage = require("../modules/responseMessage");
 const statusCode = require("../modules/statusCode");
-const { User, Post } = require("../models");
+const { User } = require("../models");
 
 module.exports = {
   createUser: async (req, res) => {
