@@ -4,10 +4,13 @@
 
 ## API 명세서
 
-- [createPost](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 사용자가 입력한 자신의 휴식 방법을 Post 테이블에 추가하고, 다른 사용자에게 보여줍니다.
+[유저] (https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/User)
+
+[게시글] (https://github.com/soptkerthon-kyahaha/kyahaha-server/wiki/Post)
+<!-- - [createPost](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 사용자가 입력한 자신의 휴식 방법을 Post 테이블에 추가하고, 다른 사용자에게 보여줍니다.
 - [createUser](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/userController.js): 사용자의 닉네임과 파트를 전달받아 User 테이블에 추가합니다. 
 - [toggleLike](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 각 Post는 좋아요를 받을 수 있습니다.
-- [readAllPosts](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 모든 Posts를 조회합니다.
+- [readAllPosts](https://github.com/soptkerthon-kyahaha/kyahaha-server/blob/main/controllers/postController.js): 모든 Posts를 조회합니다. -->
 
 ## sequelize Model
 
