@@ -1,6 +1,6 @@
 # For Ideal SOPT Hitchhiking
 
-일중독자 솝트인들을 위한 안내서
+멈추면 비로소 할 수 있는 것들, 솝트를 위한 휴식 레퍼런스 FISHING
 
 ## API 명세서
 
