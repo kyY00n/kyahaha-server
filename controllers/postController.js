@@ -14,7 +14,7 @@ module.exports = {
       const post = await Post.create({
         title,
         contents,
-        // postImageUrl,
+        postImageUrl,
       });
       await user.addPost(post);
       res
@@ -77,6 +77,9 @@ module.exports = {
           );
       } else {
         const like = await Like.create({ UserId, PostId });
+        await Post.increment("numberOfLikes", {
+          where: { id: PostId },
+        });
         return res
           .status(statusCode.OK)
           .send(

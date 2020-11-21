@@ -22,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(100),
         allowNull: true,
       },
+      numberOfLikes: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+      },
     },
     {
       freezeTableName: true,
