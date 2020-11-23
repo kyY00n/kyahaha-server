@@ -9,7 +9,7 @@
 ## 🔧 Credit
 
 - **Language**: JavaScript
-- **Framework **: Node.js
+- **Framework**: Node.js
 
 ## 💻 Getting Started
 
